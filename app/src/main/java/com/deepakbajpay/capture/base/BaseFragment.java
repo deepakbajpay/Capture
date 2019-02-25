@@ -1,4 +1,4 @@
-package com.example.myapplication.base;
+package com.deepakbajpay.capture.base;
 
 import androidx.fragment.app.Fragment;
 

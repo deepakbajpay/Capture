@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.deepakbajpay.capture;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.myapplication.capture_image;
+package com.deepakbajpay.capture.capture_image;
 
 
 import android.Manifest;
@@ -20,7 +20,7 @@ import android.widget.ImageView;
 
 import com.camerakit.CameraKit;
 import com.camerakit.CameraKitView;
-import com.example.myapplication.R;
+import com.deepakbajpay.capture.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

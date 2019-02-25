@@ -1,4 +1,4 @@
-package com.example.myapplication.capture_image;
+package com.deepakbajpay.capture.capture_image;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,9 +9,9 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.myapplication.R;
-import com.example.myapplication.utils.Utilities;
-import com.example.myapplication.base.BaseActivity;
+import com.deepakbajpay.capture.R;
+import com.deepakbajpay.capture.utils.Utilities;
+import com.deepakbajpay.capture.base.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,7 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
-import static com.example.myapplication.utils.Constants.GALLERY_PERMISSIONS;
+import static com.deepakbajpay.capture.utils.Constants.GALLERY_PERMISSIONS;
 
 public class CaptureImageActivity extends BaseActivity {
 

@@ -1,4 +1,4 @@
-package com.example.myapplication.utils;
+package com.deepakbajpay.capture.utils;
 
 import android.app.Activity;
 import android.content.Context;
