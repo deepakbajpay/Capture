@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="file_provider_name">visitor_app_file_profider</string>
+</resources>

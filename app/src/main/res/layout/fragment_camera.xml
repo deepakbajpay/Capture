@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contentFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.camerakit.CameraKitView
+            android:id="@+id/camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:keepScreenOn="true"
+            app:camera_facing="front"
+            app:camera_flash="auto"
+
+            app:camera_focus="continuous"
+            app:camera_permissions="camera" />
+
+        <ImageView
+            android:id="@+id/flash_switch_iv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="end"
+            android:layout_marginLeft="16dp"
+            android:tint="@color/white"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/circle_bg_white_border"
+            android:padding="@dimen/dimen_6dp"
+            android:src="@drawable/ic_flash_auto_black_24dp" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button_capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_btn_default"
+        android:text="Capture"
+        android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/camera_switch_iv"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="end"
+            android:layout_toRightOf="@+id/button_capture"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/circle_bg_white_border"
+            android:padding="@dimen/dimen_4dp"
+            android:src="@drawable/ic_switch_camera"
+            android:layout_toEndOf="@+id/button_capture" />
+
+    <View
+        android:id="@+id/blackCover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:visibility="gone" />
+
+    <!--  <com.wonderkiln.camerakit.demo.CameraControls xmlns:app="http://schemas.android.com/apk/res-auto"
+          android:layout_width="match_parent"
+          android:layout_height="130dp"
+          android:layout_gravity="bottom"
+          android:background="@color/colorPrimaryDark"
+          />-->
+
+</RelativeLayout>
+
+

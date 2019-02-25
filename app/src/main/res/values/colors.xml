@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0096DB</color>
+    <color name="colorPrimaryDark">#0071A4</color>
+    <color name="colorAccent">#0096DB</color>
+    <color name="schedule_accent_color">#506AAF</color>
+    <color name="black">#000</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="white">#FFF</color>
+    <color name="dark_grey">#212121</color>
+    <color name="dark_grey1">#424242</color>
+    <color name="dark_grey2">#616161</color>
+
+    <color name="light_grey">#E0E0E0</color>
+    <color name="light_grey1">#BDBDBD</color>
+    <color name="light_grey2">#9E9E9E</color>
+    <color name="normal_text_color">#505050</color>
+    <color name="translucent_white">#AAFFFFFF</color>
+    <color name="translucent_black">#9F000000</color>
+    <color name="page_bg">#EFEFEF</color>
+    <color name="font_color">@color/colorPrimaryDark</color>
+    <color name="font_color_2">@color/colorPrimary</color>
+</resources>
