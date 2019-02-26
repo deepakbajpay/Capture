@@ -23,3 +23,27 @@ Add following to your manifest
             android:configChanges="orientation|screenSize|keyboardHidden"/>
 	    
 	    </application>
+
+
+Finally to call camera in your activity or fragment
+
+	    CaptureImageActivity.IntentBuilder intentBuilder = new CaptureImageActivity.IntentBuilder(getActivity(),DIRECTORY_PATH_TO_STORE_FILE);
+                        intentBuilder.setFacing(Capture.FACING_FRONT)
+                                .setFlashMode(Capture.FLASH_AUTO);
+                        Intent intent = intentBuilder.build();
+                        startActivityForResult(intent,CAPTURE_IMAGE_CODE);
+
+
+         @Override
+            public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+                switch (requestCode) {
+                    case CAPTURE_IMAGE_CODE:
+                        if (resultCode == RESULT_OK) {
+                            photoPath = (Uri) data.getExtras().get(Capture.IMAGE_PATH);
+                            }
+                        }
+                }
+
+
+
