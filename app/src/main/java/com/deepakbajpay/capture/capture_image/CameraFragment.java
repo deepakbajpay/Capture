@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import com.camerakit.CameraKit;
 import com.camerakit.CameraKitView;
 import com.deepakbajpay.capture.R;
+import com.deepakbajpay.capture.utils.Capture;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -123,11 +124,11 @@ public class CameraFragment extends Fragment implements CameraKitView.ImageCallb
             camera.setFacing(CameraKit.FACING_BACK);
         }
 
-        if (CaptureImageActivity.intentBuilder.getFlashMode() == 0) {
+        if (CaptureImageActivity.intentBuilder.getFlashMode() == Capture.FLASH_AUTO) {
             switchFlashMode(CameraKit.FLASH_AUTO);
-        } else if (CaptureImageActivity.intentBuilder.getFlashMode() == 1) {
+        } else if (CaptureImageActivity.intentBuilder.getFlashMode() == Capture.FLASH_ON) {
             switchFlashMode(CameraKit.FLASH_ON);
-        } else if (CaptureImageActivity.intentBuilder.getFlashMode() == 2) {
+        } else if (CaptureImageActivity.intentBuilder.getFlashMode() == Capture.FLASH_OFF) {
             switchFlashMode(CameraKit.FLASH_OFF);
         } else {
             switchFlashMode(CameraKit.FLASH_TORCH);
@@ -254,7 +255,7 @@ public class CameraFragment extends Fragment implements CameraKitView.ImageCallb
 
     private void setImagePathAndFinish(Uri imagePath) {
         Intent intent = new Intent();
-        intent.putExtra(CaptureImageActivity.IntentBuilder.IMAGE_PATH, imagePath);
+        intent.putExtra(Capture.IMAGE_PATH, imagePath);
         getActivity().setResult(RESULT_OK, intent);
         System.out.println("CaptureImageActivity.setImagePathAndFinish");
         getActivity().finish();
@@ -286,7 +287,7 @@ public class CameraFragment extends Fragment implements CameraKitView.ImageCallb
                     switchFlashMode(CameraKit.FLASH_OFF);
                     break;
                 case CameraKit.FLASH_OFF:
-                    switchFlashMode(CameraKit.FLASH_TORCH);
+                    switchFlashMode(CameraKit.FLASH_AUTO);
                     break;
                 case CameraKit.FLASH_TORCH:
                     switchFlashMode(CameraKit.FLASH_AUTO);
