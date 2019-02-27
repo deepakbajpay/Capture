@@ -19,7 +19,6 @@
             android:keepScreenOn="true"
             app:camera_facing="front"
             app:camera_flash="auto"
-
             app:camera_focus="continuous"
             app:camera_permissions="camera" />
 
